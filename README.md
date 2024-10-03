@@ -11,10 +11,10 @@ Narzędzia i środowiska których używałem:
 Kroki z eksportem do pdf oraz wysyłaniem maila z przypomnieniem o zwrocie nie są zrobione 
 Krok z obrazem dockerowym nie zrobilem z powodu problemow z komputerem ktore proba zrobienia tego kroku powodowala.
 
-Połączenie z bazą PostgreSQL w pliku application.properties
-spring.datasource.url = jdbc:postgresql://localhost:5432/databasemd
-spring.datasource.username = usermd
-spring.datasource.password = haslomd
+Połączenie z bazą PostgreSQL w pliku application.properties</br>
+spring.datasource.url = jdbc:postgresql://localhost:5432/databasemd</br>
+spring.datasource.username = usermd</br>
+spring.datasource.password = haslomd</br>
 
 Projekt domyślnie startuje na:
 http://localhost:8080
@@ -28,30 +28,30 @@ kontrolery do testowania w Swagger:
 Szablon wprowadzania niektórych danych w Swagger POST
 
 <h3>reader:</h3>
-{
-  "name": "imie",
-  "email": "mail@mail.com"
-}
+{</br>
+  "name": "imie",</br>
+  "email": "mail@mail.com"</br>
+}</br>
 <h3>genre:</h3>
-{
-  "name": "nazwa"
+{</br>
+  "name": "nazwa"</br>
 }
 <h3>book:</h3>
-{
-  "title": "tytul",
-  "author": "autor",
-  "isbn": "numer isbn",
-  "yearPublished": rok wydania,
-  "publisher": "wydawca",
-  "genre": {
-    "id": id istniejącego gatunku
-  }
-}
+{</br>
+  "title": "tytul",</br>
+  "author": "autor",</br>
+  "isbn": "numer isbn",</br>
+  "yearPublished": rok wydania,</br>
+  "publisher": "wydawca",</br>
+  "genre": {</br>
+    "id": id istniejącego gatunku</br>
+     }</br>
+}</br>
 <h3>lub bez gatunku:</h3>
-{
-  "title": "tytul",
-  "author": "autor",
-  "isbn": "numer isbn",
-  "yearPublished": rok wydania,
-  "publisher": "wydawca"
+{</br
+  "title": "tytul",</br>
+  "author": "autor",</br>
+  "isbn": "numer isbn",</br>
+  "yearPublished": rok wydania,</br>
+  "publisher": "wydawca"</br>
 }
