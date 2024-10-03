@@ -21,16 +21,16 @@ kontrolery do testowania w Swagger:
 
 Szablon wprowadzania niektórych danych w Swagger POST
 
-reader:
+<h3>reader:</h3>
 {
   "name": "imie",
   "email": "mail@mail.com"
 }
-genre:
+<h3>genre:</h3>
 {
   "name": "nazwa"
 }
-book:
+<h3>book:</h3>
 {
   "title": "tytul",
   "author": "autor",
@@ -41,7 +41,7 @@ book:
     "id": id istniejącego gatunku
   }
 }
-lub bez gatunku:
+<h3>lub bez gatunku:</h3>
 {
   "title": "tytul",
   "author": "autor",
