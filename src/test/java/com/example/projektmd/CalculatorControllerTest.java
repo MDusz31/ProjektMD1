@@ -20,7 +20,6 @@ public class CalculatorControllerTest {
 
     @BeforeEach
     public void setUp() {
-        // Jakiekolwiek przygotowania przed każdym testem
     }
 
     @Test
@@ -29,8 +28,8 @@ public class CalculatorControllerTest {
                         .param("a", "10")
                         .param("b", "5")
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$", is(15.0)));
+                        .andExpect(status().isOk())
+                        .andExpect(jsonPath("$", is(15.0)));
     }
 
     @Test
@@ -39,8 +38,8 @@ public class CalculatorControllerTest {
                         .param("a", "10")
                         .param("b", "5")
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$", is(5.0)));
+                        .andExpect(status().isOk())
+                        .andExpect(jsonPath("$", is(5.0)));
     }
 
     @Test
@@ -49,8 +48,8 @@ public class CalculatorControllerTest {
                         .param("a", "10")
                         .param("b", "5")
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$", is(50.0)));
+                        .andExpect(status().isOk())
+                        .andExpect(jsonPath("$", is(50.0)));
     }
 
     @Test
@@ -59,8 +58,8 @@ public class CalculatorControllerTest {
                         .param("a", "10")
                         .param("b", "5")
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$", is(2.0)));
+                        .andExpect(status().isOk())
+                        .andExpect(jsonPath("$", is(2.0)));
     }
 
     @Test
@@ -69,7 +68,7 @@ public class CalculatorControllerTest {
                         .param("a", "10")
                         .param("b", "0")
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.error", is("Dzielenie przez zero nie jest dozwolone.")));
+                        .andExpect(status().isOk())
+                        .andExpect(jsonPath("$.error", is("Dzielenie przez zero nie jest dozwolone.")));
     }
 }

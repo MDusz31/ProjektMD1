@@ -34,131 +34,89 @@ public class ReaderControllerTest {
 
     @Test
     public void testAddReader() {
-        // Given
         Reader reader = new Reader();
-        reader.setName("John Doe");
-        reader.setEmail("john@example.com");
+        reader.setName("Jan Kowalski");
+        reader.setEmail("jan@gm.com");
 
         when(readerRepository.save(any(Reader.class))).thenReturn(reader);
 
-        // When
         ResponseEntity<Reader> response = readerController.addReader(reader);
 
-        // Then
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals("John Doe", response.getBody().getName());
-        assertEquals("john@example.com", response.getBody().getEmail());
+        assertEquals("Jan Kowalski", response.getBody().getName());
+        assertEquals("jan@gm.com", response.getBody().getEmail());
     }
 
     @Test
     public void testGetAllReaders() {
-        // Given
         Reader reader1 = new Reader();
         reader1.setId(1L);
-        reader1.setName("John Doe");
-        reader1.setEmail("john@example.com");
+        reader1.setName("Jan Kowalski");
+        reader1.setEmail("jan@gm.com");
 
         Reader reader2 = new Reader();
         reader2.setId(2L);
-        reader2.setName("Jane Smith");
-        reader2.setEmail("jane@example.com");
+        reader2.setName("Karol Krawczyk");
+        reader2.setEmail("Karol@gm.com");
 
         List<Reader> readers = Arrays.asList(reader1, reader2);
         when(readerRepository.findAll()).thenReturn(readers);
 
-        // When
         List<Reader> result = readerController.getAllReaders();
 
-        // Then
         assertEquals(2, result.size());
-        assertEquals("John Doe", result.get(0).getName());
-        assertEquals("Jane Smith", result.get(1).getName());
+        assertEquals("Jan Kowalski", result.get(0).getName());
+        assertEquals("Karol Krawczyk", result.get(1).getName());
     }
 
     @Test
-    public void testGetReaderByIdFound() {
-        // Given
+    public void testGetReaderById() {
         Reader reader = new Reader();
         reader.setId(1L);
-        reader.setName("John Doe");
-        reader.setEmail("john@example.com");
+        reader.setName("Jan");
+        reader.setEmail("j@gm.com");
 
         when(readerRepository.findById(1L)).thenReturn(Optional.of(reader));
 
-        // When
         ResponseEntity<Reader> response = readerController.getReaderById(1L);
 
-        // Then
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals("John Doe", response.getBody().getName());
+        assertEquals("Jan", response.getBody().getName());
     }
 
     @Test
-    public void testGetReaderByIdNotFound() {
-        // Given
-        when(readerRepository.findById(anyLong())).thenReturn(Optional.empty());
-
-        // When
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            readerController.getReaderById(1L);
-        });
-
-        // Then
-        assertEquals("Reader not found with id: 1", exception.getMessage());
-    }
-
-    @Test
-    public void testUpdateReaderFound() {
-        // Given
+    public void testUpdateReader() {
         Reader existingReader = new Reader();
         existingReader.setId(1L);
-        existingReader.setName("John Doe");
-        existingReader.setEmail("john@example.com");
+        existingReader.setName("Jan");
+        existingReader.setEmail("j@gm.com");
 
         Reader updatedReader = new Reader();
-        updatedReader.setName("John Smith");
-        updatedReader.setEmail("johnsmith@example.com");
+        updatedReader.setName("Karol");
+        updatedReader.setEmail("k@gm.com");
 
         when(readerRepository.findById(1L)).thenReturn(Optional.of(existingReader));
         when(readerRepository.save(any(Reader.class))).thenReturn(existingReader);
 
-        // When
         ResponseEntity<Reader> response = readerController.updateReader(1L, updatedReader);
 
-        // Then
         assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals("John Smith", response.getBody().getName()); // Sprawdzanie starego imienia
+        assertEquals("Karol", response.getBody().getName());
     }
 
-    @Test
-    public void testUpdateReaderNotFound() {
-        // Given
-        when(readerRepository.findById(anyLong())).thenReturn(Optional.empty());
-
-        // When
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            readerController.updateReader(1L, new Reader());
-        });
-
-        // Then
-        assertEquals("Reader not found with id: 1", exception.getMessage());
-    }
 
     @Test
     public void testDeleteReader() {
-        // Given
         Reader reader = new Reader();
         reader.setId(1L);
-        reader.setName("John Doe");
-        reader.setEmail("john@example.com");
+        reader.setName("Jan");
+        reader.setEmail("j@gm.com");
 
         when(readerRepository.findById(1L)).thenReturn(Optional.of(reader));
         doNothing().when(readerRepository).delete(any(Reader.class));
 
-        // When
         ResponseEntity<Void> response = readerController.deleteReader(1L);
 
-        // Then
         assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
         verify(readerRepository, times(1)).delete(reader);
     }

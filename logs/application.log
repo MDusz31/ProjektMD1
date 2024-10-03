@@ -274,3 +274,86 @@ java.lang.IllegalArgumentException: The Unicode character [ą] at code point [26
 2024-10-03 17:03:30 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2024-10-03 17:03:30 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 30 ms
 2024-10-03 17:03:35 INFO  [http-nio-8080-exec-6] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 2941 ms
+2024-10-03 17:50:24 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-03 17:50:25 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-03 17:50:25 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-10-03 17:50:46 INFO  [main] c.e.projektmd.ProjektmdApplication - Starting ProjektmdApplication using Java 22.0.2 with PID 6796 (C:\Users\macie\IdeaProjects\projektmd\target\classes started by macie in C:\Users\macie\IdeaProjects\projektmd)
+2024-10-03 17:50:46 INFO  [main] c.e.projektmd.ProjektmdApplication - No active profile set, falling back to 1 default profile: "default"
+2024-10-03 17:50:48 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-03 17:50:48 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 113 ms. Found 3 JPA repository interfaces.
+2024-10-03 17:50:49 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-10-03 17:50:49 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-03 17:50:49 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-03 17:50:49 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-03 17:50:50 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-03 17:50:50 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3464 ms
+2024-10-03 17:50:50 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-03 17:50:51 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@111a7973
+2024-10-03 17:50:51 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-03 17:50:51 INFO  [main] liquibase.database - Set default schema name to public
+2024-10-03 17:50:52 INFO  [main] liquibase.changelog - Reading from public.databasechangelog
+2024-10-03 17:50:52 INFO  [main] liquibase.ui - Database is up to date, no changesets to execute
+2024-10-03 17:50:52 INFO  [main] liquibase.changelog - Reading from public.databasechangelog
+2024-10-03 17:50:52 INFO  [main] liquibase.util - UPDATE SUMMARY
+2024-10-03 17:50:52 INFO  [main] liquibase.util - Run:                          0
+2024-10-03 17:50:52 INFO  [main] liquibase.util - Previously run:               2
+2024-10-03 17:50:52 INFO  [main] liquibase.util - Filtered out:                 0
+2024-10-03 17:50:52 INFO  [main] liquibase.util - -------------------------------
+2024-10-03 17:50:52 INFO  [main] liquibase.util - Total change sets:            2
+2024-10-03 17:50:52 INFO  [main] liquibase.util - Update summary generated
+2024-10-03 17:50:52 INFO  [main] liquibase.lockservice - Successfully released change log lock
+2024-10-03 17:50:52 INFO  [main] liquibase.command - Command execution complete
+2024-10-03 17:50:53 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-03 17:50:53 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-03 17:50:53 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-10-03 17:50:54 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-03 17:50:56 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-03 17:50:56 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-03 17:50:57 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-03 17:50:59 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-03 17:50:59 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-10-03 17:50:59 INFO  [main] c.e.projektmd.ProjektmdApplication - Started ProjektmdApplication in 13.953 seconds (process running for 15.963)
+2024-10-03 17:53:06 INFO  [main] c.e.p.CalculatorControllerTest - Starting CalculatorControllerTest using Java 22.0.2 with PID 10908 (started by macie in C:\Users\macie\IdeaProjects\projektmd)
+2024-10-03 17:53:06 INFO  [main] c.e.p.CalculatorControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-10-03 17:53:10 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-10-03 17:53:10 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-10-03 17:53:10 INFO  [main] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 16 ms
+2024-10-03 17:53:10 INFO  [main] c.e.p.CalculatorControllerTest - Started CalculatorControllerTest in 5.556 seconds (process running for 8.442)
+2024-10-03 17:53:13 ERROR [main] c.e.projektmd.CalculatorController - Dzielenie przez zero: 10.0 / 0.0
+2024-10-03 17:53:14 INFO  [main] c.e.projektmd.CalculatorController - Dodawanie: 10.0 + 5.0 = 15.0
+2024-10-03 17:53:14 INFO  [main] c.e.projektmd.CalculatorController - Odejmowanie: 10.0 - 5.0 = 5.0
+2024-10-03 17:53:14 INFO  [main] c.e.projektmd.CalculatorController - Dzielenie: 10.0 / 5.0 = 2.0
+2024-10-03 17:53:14 INFO  [main] c.e.projektmd.CalculatorController - Mnożenie: 10.0 * 5.0 = 50.0
+2024-10-03 17:53:16 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.projektmd.ProjektmdApplicationTests]: ProjektmdApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-10-03 17:53:16 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.projektmd.ProjektmdApplication for test class com.example.projektmd.ProjektmdApplicationTests
+2024-10-03 17:53:17 INFO  [main] c.e.p.ProjektmdApplicationTests - Starting ProjektmdApplicationTests using Java 22.0.2 with PID 10908 (started by macie in C:\Users\macie\IdeaProjects\projektmd)
+2024-10-03 17:53:17 INFO  [main] c.e.p.ProjektmdApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-10-03 17:53:20 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-03 17:53:20 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144 ms. Found 3 JPA repository interfaces.
+2024-10-03 17:53:21 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-03 17:53:24 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@ff1a5a0
+2024-10-03 17:53:24 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-03 17:53:26 INFO  [main] liquibase.database - Set default schema name to public
+2024-10-03 17:53:28 INFO  [main] liquibase.changelog - Reading from public.databasechangelog
+2024-10-03 17:53:28 INFO  [main] liquibase.ui - Database is up to date, no changesets to execute
+2024-10-03 17:53:28 INFO  [main] liquibase.changelog - Reading from public.databasechangelog
+2024-10-03 17:53:28 INFO  [main] liquibase.util - UPDATE SUMMARY
+2024-10-03 17:53:28 INFO  [main] liquibase.util - Run:                          0
+2024-10-03 17:53:28 INFO  [main] liquibase.util - Previously run:               2
+2024-10-03 17:53:28 INFO  [main] liquibase.util - Filtered out:                 0
+2024-10-03 17:53:28 INFO  [main] liquibase.util - -------------------------------
+2024-10-03 17:53:28 INFO  [main] liquibase.util - Total change sets:            2
+2024-10-03 17:53:28 INFO  [main] liquibase.util - Update summary generated
+2024-10-03 17:53:29 INFO  [main] liquibase.lockservice - Successfully released change log lock
+2024-10-03 17:53:29 INFO  [main] liquibase.command - Command execution complete
+2024-10-03 17:53:29 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-03 17:53:29 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-03 17:53:30 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-10-03 17:53:30 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-03 17:53:32 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-03 17:53:33 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-03 17:53:34 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-03 17:53:36 INFO  [main] c.e.p.ProjektmdApplicationTests - Started ProjektmdApplicationTests in 19.827 seconds (process running for 34.584)
+2024-10-03 17:53:37 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-03 17:53:37 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-03 17:53:37 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
